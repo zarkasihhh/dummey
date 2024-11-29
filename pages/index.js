@@ -8,7 +8,7 @@ import SeoHead from "../components/SeoHead";
 export default function Home() {
   return (
     <>
-      <SeoHead title='LaslesVPN Landing Page' />
+      <SeoHead title='Event Memasak Landing Page' />
       <Head>
         {/* Chatbot Scripts */}
         <script
