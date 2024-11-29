@@ -7,43 +7,43 @@ import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
-const Testimoni = ({
+const EventMemasak = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
+      name: "Iezh Robert",
       image: "/assets/people-3.png",
       city: "Warsaw",
-      country: "Poland",
+      country: "Polandia",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Wow... Saya sangat senang mengikuti acara memasak ini. Itu melebihi harapan saya, dan saya belajar banyak resep baru. Sangat disarankan untuk para penggemar kuliner!",
     },
     {
-      name: "iezh Robert",
+      name: "John Doe",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      city: "New York",
+      country: "AS",
+      rating: "4.7",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Pengalaman yang luar biasa! Acara memasak diselenggarakan dengan sempurna, dan para instruktur sangat berpengetahuan. Saya tidak sabar untuk mencoba resep-resep ini di rumah!",
     },
     {
-      name: "iezh Robert",
+      name: "Jane Smith",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      city: "London",
+      country: "Inggris",
+      rating: "4.8",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Ini adalah acara yang fantastis. Pendekatan langsung membuatnya mudah diikuti, dan saya mendapatkan banyak tips berharga dari para koki. Sangat direkomendasikan untuk siapa saja!",
     },
     {
-      name: "iezh Robert",
+      name: "Ali Khan",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      city: "Karachi",
+      country: "Pakistan",
+      rating: "4.6",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "Pengalaman yang menyenangkan yang mengumpulkan orang-orang yang memiliki cinta untuk memasak. Saya keluar dengan teman baru dan buku resep baru!",
     },
   ],
 }) => {
@@ -141,4 +141,4 @@ const Testimoni = ({
   );
 };
 
-export default Testimoni;
+export default EventMemasak;
