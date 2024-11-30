@@ -29,8 +29,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/masakin-event-dashboard.git
-   cd masakin-event-dashboard
+   git clone https://github.com/zarkasihhh/dummey.git
+   cd dummey
    ```
 
 2. **Install dependencies**:
