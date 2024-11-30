@@ -4,6 +4,7 @@ import ButtonPrimary from "./misc/ButtonPrimary";
 import {motion} from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import { useUser, UserButton } from "@clerk/nextjs"; //Penambahan clerk user
 
 const Hero = ({
   listUser = [
@@ -25,6 +26,7 @@ const Hero = ({
   ],
 }) => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const { isLoaded, user } = useUser(); // clerk user
 
   return (
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
@@ -40,7 +42,13 @@ const Hero = ({
               Temui para chef berbakat, ikuti kompetisi memasak, dan temukan resep
               menarik yang akan membuat pengalaman kuliner Anda tak terlupakan.
             </p>
-            <ButtonPrimary>Daftar Sekarang</ButtonPrimary>
+            {isLoaded && user ? (
+                    <ButtonPrimary>Ikuti Event</ButtonPrimary>
+                  ) : (
+                    <>
+                      <ButtonPrimary>Daftar Sekarang</ButtonPrimary>
+                    </>
+                  )}
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>

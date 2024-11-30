@@ -7,9 +7,11 @@ import Maps from "../public/assets/HugeGlobal.svg";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import { useUser, UserButton } from "@clerk/nextjs"; // Penambahan clerk user
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const { isLoaded, user } = useUser(); // clerk user
 
   return (
     <div
@@ -23,13 +25,14 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
-              Select Your Cooking Class
+              Pilih Kelas Memasak Anda
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
               className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center"
             >
-              Choose the class that suits your skills and join us to cook, learn, and have fun!
+              Pilih kelas yang sesuai dengan kemampuan Anda dan bergabunglah untuk memasak,
+              belajar, dan bersenang-senang!
             </motion.p>
           </ScrollAnimationWrapper>
           <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 px-6 sm:px-0 lg:px-6">
@@ -49,23 +52,37 @@ const Pricing = () => {
                     src="/assets/Premium.png"
                     width={145}
                     height={165}
-                    alt="Basic Cooking Class"
+                    alt="Kelas Memasak Dasar"
                   />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
-                  Basic Cooking Class
+                  Kelas Memasak Dasar
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                  <li className="relative check custom-list my-2">Learn 5 Essential Recipes</li>
-                  <li className="relative check custom-list my-2">Beginner-Friendly Techniques</li>
-                  <li className="relative check custom-list my-2">Access to Online Cooking Community</li>
-                  <li className="relative check custom-list my-2">Hands-on Guidance from Experts</li>
+                  <li className="relative check custom-list my-2">
+                    Pelajari 5 Resep Penting
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Teknik Ramah Pemula
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Akses ke Komunitas Memasak Online
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Bimbingan Praktis dari Ahli
+                  </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
                   <p className="text-2xl text-black-600 text-center mb-4">
-                    $50 <span className="text-black-500">/ class</span>
+                    $50 <span className="text-black-500">/ kelas</span>
                   </p>
-                  <ButtonOutline>Sign Up</ButtonOutline>
+                  {isLoaded && user ? (
+                    <ButtonOutline>Berlangganan</ButtonOutline>
+                  ) : (
+                    <>
+                      <ButtonOutline>Daftar</ButtonOutline>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -85,23 +102,37 @@ const Pricing = () => {
                     src="/assets/Premium.png"
                     width={145}
                     height={165}
-                    alt="Intermediate Cooking Class"
+                    alt="Kelas Memasak Menengah"
                   />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
-                  Intermediate Cooking Class
+                  Kelas Memasak Menengah
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                  <li className="relative check custom-list my-2">Learn 10 Advanced Recipes</li>
-                  <li className="relative check custom-list my-2">Intermediate Techniques</li>
-                  <li className="relative check custom-list my-2">Live Q&A with Professional Chefs</li>
-                  <li className="relative check custom-list my-2">Interactive Cooking Demos</li>
+                  <li className="relative check custom-list my-2">
+                    Pelajari 10 Resep Lanjutan
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Teknik Menengah
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Sesi Tanya Jawab Langsung dengan Koki Profesional
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Demo Memasak Interaktif
+                  </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
                   <p className="text-2xl text-black-600 text-center mb-4">
-                    $100 <span className="text-black-500">/ class</span>
+                    $100 <span className="text-black-500">/ kelas</span>
                   </p>
-                  <ButtonOutline>Sign Up</ButtonOutline>
+                  {isLoaded && user ? (
+                    <ButtonOutline>Berlangganan</ButtonOutline>
+                  ) : (
+                    <>
+                      <ButtonOutline>Daftar</ButtonOutline>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -121,23 +152,37 @@ const Pricing = () => {
                     src="/assets/Premium.png"
                     width={145}
                     height={165}
-                    alt="Advanced Cooking Class"
+                    alt="Kelas Memasak Lanjutan"
                   />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
-                  Advanced Cooking Class
+                  Kelas Memasak Lanjutan
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
-                  <li className="relative check custom-list my-2">Master 15 Gourmet Recipes</li>
-                  <li className="relative check custom-list my-2">Advanced Culinary Techniques</li>
-                  <li className="relative check custom-list my-2">One-on-One Session with a Chef</li>
-                  <li className="relative check custom-list my-2">Certificate of Completion</li>
+                  <li className="relative check custom-list my-2">
+                    Kuasai 15 Resep Gourmet
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Teknik Kuliner Lanjutan
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Sesi Pribadi dengan Koki
+                  </li>
+                  <li className="relative check custom-list my-2">
+                    Sertifikat Penyelesaian
+                  </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
                   <p className="text-2xl text-black-600 text-center mb-4">
-                    $150 <span className="text-black-500">/ class</span>
+                    $150 <span className="text-black-500">/ kelas</span>
                   </p>
-                  <ButtonOutline>Sign Up</ButtonOutline>
+                  {isLoaded && user ? (
+                    <ButtonOutline>Berlangganan</ButtonOutline>
+                  ) : (
+                    <>
+                      <ButtonOutline>Daftar</ButtonOutline>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -145,56 +190,26 @@ const Pricing = () => {
         </div>
         <div className="flex flex-col w-full my-16">
           <ScrollAnimationWrapper>
-            <motion.h3
+            <motion.h4xs
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto"
+              className="text-xl sm:text-2xl lg:text-3xl font-semibold text-black-600 text-center mb-6"
             >
-              Join Our Global Cooking Community
-            </motion.h3>
+              Bergabunglah dengan Kelas Memasak Kami Sekarang!
+            </motion.h4xs>
             <motion.p
               variants={scrollAnimation}
-              className="leading-normal mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12"
+              className="leading-normal w-10/12 sm:w-8/12 lg:w-7/12 mx-auto text-center mb-6 text-black-500"
             >
-              Connect with fellow chefs and enthusiasts from around the world. Join us and make cooking fun and easy!
+              Dengan bergabung di kelas kami, Anda akan mendapatkan pengalaman memasak yang
+              luar biasa, dari dasar hingga teknik lanjutan. Tingkatkan keterampilan Anda dan
+              jadilah chef handal!
             </motion.p>
+            {isLoaded && user ? (
+              <ButtonPrimary>Mulai Belajar</ButtonPrimary>
+            ) : (
+              <ButtonPrimary>Daftar untuk Bergabung</ButtonPrimary>
+            )}
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
-            <motion.div className="py-12 w-full px-8 mt-16" variants={scrollAnimation}>
-              <Maps className="w-full h-auto" />
-            </motion.div>
-          </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
-            <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>
-              <img
-                src="/assets/Icon/blueband.png"
-                className="h-14 w-auto mt-4 lg:mt-2"
-                alt="Chefs Club"
-              />
-              <img
-                src="/assets/Icon/cuisinart.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt="Cooking Show"
-              />
-              <img
-                src="/assets/Icon/abc.svg"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt="Food Network"
-              />
-              <img
-                src="/assets/Icon/starbucks.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt="MasterChef"
-              />
-              <img
-                src="/assets/Icon/masterchef.png"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt="Culinary School"
-              />
-            </motion.div>
-          </ScrollAnimationWrapper>
-        </div>
-        <div className="flex flex-col w-full">
-          <Testimoni />
         </div>
       </div>
     </div>
