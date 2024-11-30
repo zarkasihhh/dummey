@@ -1,40 +1,71 @@
-# [Tailwind VPN Landingpage](https://next-landing-vpn.vercel.app/) - Free Landingpage Template Apps
+Here's a draft README for your GitHub repository to showcase your project:
 
-Tailwind VPN Landingpage is an open source, apps landing page template for [Tailwind CSS](https://tailwindcss.com/) and[ NextJS](nextjs.org/) coded by [Faldi](twitter.com/f2aldi) and design from [Didi](https://twitter.com/didiikurniawann).
+---
 
-![Landing Page](./landingpage.png)
+# Masakin Event Dashboard
 
-## Getting Started
+Welcome to **Masakin Event Dashboard**! This is a web application designed to manage and display event-related information with a focus on a user-friendly experience. It leverages modern web technologies for a seamless and interactive user interface.
 
-Choose one of the following options to get started:
+## Live Demo
 
-- [Download the latest release](https://github.com/naufaldi/next-landing-vpn/archive/main.zip)
-- Clone the repo: `git clone https://github.com/naufaldi/next-landing-vpn.git`
-- Fork the repo
+Check out the live version of the project at: [https://masakin.onrender.com/](https://masakin.onrender.com/)
 
-## About the Template
+## Features
 
-- Template building using NextJS Version 10
-- Tailwind v2.0
+- **Responsive Design**: Fully responsive layout for desktop and mobile devices.
+- **Interactive Navigation**: Smooth scrolling and dynamic navigation for easy access to different sections.
+- **User Authentication**: Integration with Clerk for user sign-in and profile management.
+- **Dashboard Components**: Key sections like `Acara`, `Resep`, `Kompetisi`, and `Kontak` for event details.
+- **Stylish UI**: Modern design with hover effects, smooth transitions, and rounded buttons for an optimal user experience.
 
-## Feature Template
+## Tech Stack
 
-- Using [NextJS Image](https://nextjs.org/docs/api-reference/next/image) for Image Optimization
-- Slider using [React Slick](https://react-slick.neostack.com/docs/api)
-- Smooth Scrolling and Active menu using [React Scroll](https://www.npmjs.com/package/react-scroll)
+- **Frontend**: React, Next.js (version 12.3.1)
+- **Styling**: Tailwind CSS
+- **User Authentication**: Clerk
+- **Deployment**: Render.com (hosted live)
 
-## Bugs and Issues
+## Installation
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/naufaldi/next-landing-vpn/issues/new) here on GitHub.
+To set up the project locally, follow these steps:
 
-## Creator
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/zarkasihhh/dummey.git
+   cd dummey
+   ```
 
-[Tailwind VPN Landingpage](https://next-landing-vpn.vercel.app/) was coded and modified by and is maintained by **[me](https://github.com/naufaldi/)**, and dekstop design by [Didi Kurniawan](https://twitter.com/didiikurniawann)
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Copyright and License
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-Code released under the MIT license.
+   Your app will be available at [http://localhost:3000](http://localhost:3000).
 
-## To Do List Add Feature
+## Usage
 
-- [ ] Animation using Framer Motion
+- Navigate through the dashboard to explore sections such as events, recipes, competitions, and contact information.
+- Authenticate using the "Daftar Peserta" button for participant registration and access user-specific content.
+
+## Features in Progress
+
+- Add user role-based permissions.
+- Implement more interactive elements and animations.
+- Expand on mobile-friendly UI enhancements.
+
+## Contributing
+
+Feel free to fork the repo, create a branch, make improvements, and open a pull request. Contributions are always welcome!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+This README provides a complete overview of your project for GitHub. Be sure to replace any placeholders with your actual details, such as your username or additional project-specific notes.
