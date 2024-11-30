@@ -8,7 +8,7 @@ import SeoHead from "../components/SeoHead";
 export default function Home() {
   return (
     <>
-      <SeoHead title='Event Memasak Landing Page' />
+      <SeoHead title='Masakin' />
       <Head>
         {/* Chatbot Scripts */}
         <script

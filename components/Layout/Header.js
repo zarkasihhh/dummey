@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
 import { useUser, UserButton } from "@clerk/nextjs"; // Import UserButton
 import ButtonOutline from "../misc/ButtonOutline.";
-import LogoEvent from "../../public/assets/LogoEvent.svg";
+import Masakin from "../../public/assets/Masakin.svg";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
@@ -26,8 +26,10 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <LogoEvent className="h-8 w-auto" />
+            <Masakin className="h-12 w-auto" />
+            <span className="ml-2 text-xl font-semibold">Masakin</span>
           </div>
+
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500 items-center">
             <LinkScroll
               activeClass="active"
