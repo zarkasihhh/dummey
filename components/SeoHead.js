@@ -7,14 +7,14 @@ const defaultMeta = {
   title: 'Event Memasak',
   siteName: 'Event Memasak',
   description:
-    'Landing page VPN Event Memasak Best VPN For Privacy, Country and Cheapest',
+    'Landing page Event Memasak Best Event For Country and Cheapest',
   // change base url of your web (without '/' at the end)
-  url: 'https://next-landing-vpn.vercel.app',
+  url: 'https://laslesvpn-kgzf.onrender.com',
   type: 'website',
   robots: 'follow, index',
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status 
-  image: 'https://next-landing-vpn.vercel.app/assets/card-image.png',
+  image: 'https://laslesvpn-kgzf.onrender.com/assets/card-image.png',
   author: 'Lorem Ipsum'
 };
 
