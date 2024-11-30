@@ -1,10 +1,8 @@
-Here's a draft README for your GitHub repository to showcase your project:
-
----
-
 # Masakin Event Dashboard
 
 Welcome to **Masakin Event Dashboard**! This is a web application designed to manage and display event-related information with a focus on a user-friendly experience. It leverages modern web technologies for a seamless and interactive user interface.
+
+![Landing Page](./landingpage.png)
 
 ## Live Demo
 
@@ -31,8 +29,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/zarkasihhh/dummey.git
-   cd dummey
+   git clone https://github.com/your-username/masakin-event-dashboard.git
+   cd masakin-event-dashboard
    ```
 
 2. **Install dependencies**:
@@ -65,7 +63,3 @@ Feel free to fork the repo, create a branch, make improvements, and open a pull 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-This README provides a complete overview of your project for GitHub. Be sure to replace any placeholders with your actual details, such as your username or additional project-specific notes.
